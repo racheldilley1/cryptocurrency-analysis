@@ -7,12 +7,23 @@ def display_topics(model, feature_names, no_top_words, topic_names=None):
         print(", ".join([feature_names[i]
                         for i in topic.argsort()[:-no_top_words - 1:-1]]))
 
-def prob_df(topics):
+def prob_df(X, topics):
     cols = []
     for x in range(1,topics+1):
         cols.append('topic_'+str(x))
 
-    df = pd.DataFrame(doc_topic.round(5),
-             index = ['2017', '2018', '2019', '2020', '2021']s,
-             columns = ["component_1","component_2", "component_3" ])
+    df = pd.DataFrame(X.round(5),
+             index = ['2017', '2018', '2019', '2020', '2021'],
+             columns = cols)
     return df
+
+def topic_matrix(model, feature_names, topics):
+    idx = []
+    for x in range(1,topics+1):
+        idx.append('topic_'+str(x))
+
+    topic_word = pd.DataFrame(model.components_.round(3),
+             index = idx,
+             columns = feature_names)
+    
+    return topic_word
