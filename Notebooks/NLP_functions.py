@@ -1,4 +1,4 @@
-import Pandas as pd
+import pandas as pd
 
 def display_topics(model, feature_names, no_top_words, topic_names):
     for ix, topic in enumerate(model.components_):
