@@ -1,4 +1,6 @@
-def display_topics(model, feature_names, no_top_words, topic_names=None):
+import Pandas as pd
+
+def display_topics(model, feature_names, no_top_words, topic_names):
     for ix, topic in enumerate(model.components_):
         if not topic_names or not topic_names[ix]:
             print("\nTopic ", ix)
