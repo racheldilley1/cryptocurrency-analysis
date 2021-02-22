@@ -16,7 +16,7 @@ def prob_df(X, topics):
         cols.append('topic_'+str(x))
 
     df = pd.DataFrame(X.round(5),
-             index = ['2017', '2018', '2019', '2020', '2021'],
+             index = len(X),
              columns = cols)
     return df
 
