@@ -15,9 +15,9 @@ def prob_df(X, topics):
     for x in range(1,topics+1):
         cols.append('topic_'+str(x))
 
-    df = pd.DataFrame(X.round(5),
-             index = len(X),
-             columns = cols)
+    df = pd.DataFrame(X.round(5), columns = cols)
+    df['topic_choice'] = df.idxmax(axis=1)
+
     return df
 
 def topic_matrix(model, feature_names, topics):
@@ -28,5 +28,9 @@ def topic_matrix(model, feature_names, topics):
     topic_word = pd.DataFrame(model.components_.round(3),
              index = idx,
              columns = feature_names)
+    
+    topic_word = topic_word.T
+    topic_word['topic_choice'] = topic_word.idxmax(axis=1)
+    topic_word['max_value'] = topic_word.max(axis=1)
     
     return topic_word
