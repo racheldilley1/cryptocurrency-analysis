@@ -39,4 +39,4 @@ Over 17,00 Reddit comments from the [r/Cryptocurrency](https://www.reddit.com/r/
 
 ### Results Summary:
 
-The final topic model was a Non-Negative Matrix Factorization model was used with a Count Vectorizer that yeilded the most clear and concise topic seperation. Nine topics were chosen: Bitcoin, Ethereum, Nano, Ripple, Doge, Central Bank of Digital Currency (CBDC), Privacy, Cryptocurrency Exchanges, and Crytocurrency Trusts. Analysis and findings can be found in the Cryptocurrency Presentation pdf. 
+The final topic model was a Non-Negative Matrix Factorization model was used with a Count Vectorizer that yeilded the most clear and concise topic seperation. Topic modeiling revealed nine topics that were most common on the subreddit: Bitcoin, Ethereum, Nano, Ripple, Doge, Central Bank of Digital Currency (CBDC), Privacy, Cryptocurrency Exchanges, and Crytocurrency Trusts. Analysis and findings can be found in the Cryptocurrency Presentation pdf. 
